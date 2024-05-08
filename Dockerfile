@@ -8,6 +8,8 @@ COPY requirements.txt .
 RUN python -m pip install -U pip wheel && \
     pip install -r requirements.txt
 
+RUN pip install flake8
+
 # Copy source files last because they change the most
 COPY service ./service
 
